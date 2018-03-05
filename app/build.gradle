@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.zlit.zlbaseapp"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" } //配置com.github.WJT983049539:WjtBaseApp:1.0691时，必加
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //封装好的基础包
+    compile 'com.github.WJT983049539:WjtBaseApp:1.0691'
+    //使用okgo网络请求框架
+    compile 'com.lzy.net:okgo:2.0.0'
+    //可以单独使用，不需要依赖下方的扩展包
+    compile 'com.lzy.net:okrx:0.1.0'
+    //RxJava扩展支持，根据需要添加
+    compile 'com.lzy.net:okserver:1.1.0'
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    compile project(':weixinrefresh')
+}

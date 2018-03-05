@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AppTheme" parent="AppBaseSherlockTheme"></style>
+
+    <!-- 主题样式  Theme.Sherlock.Light.DarkActionBar -->
+    <style name="AppBaseSherlockTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionMenuTextColor">#ffffffff</item>
+        <item name="android:actionMenuTextColor">#ffffffff</item>
+    </style>
+
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WeiXinRefresh</string>
+    <string name="refresh_text_label">正在加载…</string>
+</resources>
